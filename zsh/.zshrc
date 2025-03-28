@@ -4,11 +4,20 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Set default editor
+export EDITOR="nvim"
+
+# Set path of docker socket to users path for rootless docker
+export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="agnoster"
+
+# Created by `pipx` on 2025-03-10 11:04:52
+export PATH="$PATH:/home/brian/.local/bin"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
@@ -82,10 +91,12 @@ fastfetch
 plugins=(
 	git
 	zsh-autosuggestions
+    zsh-syntax-highlighting
 	zsh-fzf-history-search
 )
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.atuin
 
 # User configuration
 
@@ -112,6 +123,6 @@ source $ZSH/oh-my-zsh.sh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias cat="bat"
+alias cd="z"
+alias adm="nohup python $HOME/workspace/python/pve_connect/connect_vm.py -vm IVV7BRIANWS -admin > /dev/null 2>&1&"
