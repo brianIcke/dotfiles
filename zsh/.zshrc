@@ -82,7 +82,6 @@ fastfetch
 plugins=(
 	git
 	zsh-autosuggestions
-	zsh-fzf-history-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -114,4 +113,23 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+###############
+### ALIASES ###
+###############
+
+
+#### APPLICATIONS ###
+alias cat="bat"
+alias top="htop"
+
+### SHORTCUTS ###
+alias zshedit="nvim $HOME/.zshrc"
+alias cd="z"
+alias hypredit="nvim $HOME/.config/hypr/hyprland.conf"
+alias nvedit="nvim $HOME/.config/nvim/init.vim"
+alias reloadrc="source $HOME/.zshrc"
+
+### INIT ATUIN ###
+eval "$(atuin init zsh)"
