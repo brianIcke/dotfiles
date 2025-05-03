@@ -1,0 +1,26 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    # Shell stuff
+    ~/.zshrc: ./zsh/zshrc
+    ~/.tmux.conf: ./tmux/tmux.conf
+    ~/.config/alacritty/alacritty.toml: ./alacritty/alacritty.toml
+
+    # Neovim stuff
+    ~/.config/nvim/init.vim: ./nvim/init.vim
+
+    # Hyprland stuff
+    ~/.config/hypr/hyprland.conf: ./hyprland/hyprland.conf
+    ~/.config/hypr/hyprlock.conf: ./hyprland/hyprlock.conf
+    ~/.config/hypr/hypridle.conf: ./hyprland/hypridle.conf
+
+    # Waybar stuff
+    ~/.config/waybar/config: ./waybar/config
+    ~/.config/waybar/style.css: ./waybar/style.css
+
+    # Swaync stuff
+    ~/.config/swaync/config.json: ./swaync/config.json
