@@ -13,6 +13,9 @@ ZSH_THEME="agnoster"
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
+# Rootless Docker
+export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
+
 # Initialize zoxide
 eval "$(zoxide init zsh)"
 
